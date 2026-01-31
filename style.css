@@ -1,0 +1,69 @@
+:root {
+    --bg-dark: #0f172a;
+    --text-light: #f8fafc;
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at top right, #312e81 0%, transparent 40%),
+        radial-gradient(circle at bottom left, #1e1b4b 0%, transparent 40%);
+}
+
+.content-wrapper h1 {
+    font-size: 4rem;
+    background: linear-gradient(to right, #818cf8, #c7d2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    letter-spacing: -0.05em;
+}
+
+.content-wrapper p {
+    color: #94a3b8;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+/* ChatKit Container Positioning */
+#chatkit-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    height: 600px;
+    z-index: 9999;
+    /* The widget itself might have internal styles, but we define the frame here */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    #chatkit-container {
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+    }
+}
